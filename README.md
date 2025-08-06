@@ -31,7 +31,7 @@ WHERE
 a.PID_TRANSACTION = NVL(:P5_TRANSACTION_ID, a.PID_TRANSACTION)
 
 ```JavaScript
-# **Step 2: JavaScript Code**
+### Step 2: JavaScript Code
 ## **Add this JavaScript to the page's Function and Global Variable Declaration section:**
 
 //apex_iten Edited Value set another normal page

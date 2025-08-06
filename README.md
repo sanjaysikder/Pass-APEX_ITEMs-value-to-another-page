@@ -1,4 +1,4 @@
-# Oracle APEX: Pass Values from Classic Report to Another Page
+# Oracle APEX: Pass APEX_ITEMS Values to Another Page from Classic Report 
 This guide demonstrates how to pass values from a classic report to another page using APEX items and JavaScript.
 ## Prerequisites
 - Oracle APEX 19.1 or higher

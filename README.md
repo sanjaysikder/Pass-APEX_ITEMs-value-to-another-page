@@ -59,7 +59,7 @@ window.location.href = url;
 
 ### Key Components:
 
--Event listener attached to the report container (#my_report)
+-Give the clasic report static ID (#my_report)
 -Identifies clicked button by class (btn-pass)
 -Extracts values from APEX items (f01, f02, f03)
 -Constructs URL with encoded values for target page items

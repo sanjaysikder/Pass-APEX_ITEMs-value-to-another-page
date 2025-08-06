@@ -5,7 +5,7 @@ This guide demonstrates how to pass values from a classic report to another page
 - Classic report region with editable fields
 - Target page with items to receive the values
 ## IMPLEMENTATION STEPS
-### Step 1: Configure Classic Report Query
+### Step 1: Configure Classic Report Query and give it a static ID
 Modify your classic report query to include APEX items and buttons:
 ```sql
 SELECT

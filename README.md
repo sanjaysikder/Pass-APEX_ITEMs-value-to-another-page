@@ -30,9 +30,12 @@ TRD_PRODUCT_INFO b ON a.PID_PRODUCT = b.PID
 WHERE
 a.PID_TRANSACTION = NVL(:P5_TRANSACTION_ID, a.PID_TRANSACTION)
 
-```JavaScript
-### Step 2: JavaScript Code
-## **Add this JavaScript to the page's Function and Global Variable Declaration section:**
+```
+
+
+
+## Step 2: JavaScript Code
+### Add this JavaScript to the page's Function and Global Variable Declaration section:
 
 //apex_iten Edited Value set another normal page
 
@@ -52,16 +55,15 @@ var url = 'f?p=' + $v('pFlowId') + ':4:' + $v('pInstance') +'::NO::P4_PID_TRANSA
 window.location.href = url;
 }
 });
+```
 
-
-```keycomponents
 ### Key Components:
 
-Event listener attached to the report container (#my_report)
-Identifies clicked button by class (btn-pass)
-Extracts values from APEX items (f01, f02, f03)
-Constructs URL with encoded values for target page items
-Redirects to page 4 with the values
+-Event listener attached to the report container (#my_report)
+-Identifies clicked button by class (btn-pass)
+-Extracts values from APEX items (f01, f02, f03)
+-Constructs URL with encoded values for target page items
+-Redirects to page 4 with the values
 
 ## Thank You
 ##Sanjay Sikder

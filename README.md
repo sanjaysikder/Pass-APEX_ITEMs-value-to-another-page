@@ -32,10 +32,11 @@ WHERE
 a.PID_TRANSACTION = NVL(:P5_TRANSACTION_ID, a.PID_TRANSACTION)
 
 
-### **Step 2: JavaScript Code**
-### **Add this JavaScript to the page's Function and Global Variable Declaration section:**
+## **Step 2: JavaScript Code**
+## **Add this JavaScript to the page's Function and Global Variable Declaration section:**
 
 //apex_iten Edited Value set another normal page
+```sql
 document.querySelector('#my_report').addEventListener('click', function(e) {
 if (e.target && e.target.classList.contains('btn-pass')) {
 var row = e.target.closest('tr');

@@ -65,28 +65,3 @@ Redirects to page 4 with the values
 ## **Thank You**
 ##**Sanjay Sikder**
 
-
-Step 2: JavaScript Code
-Add this JavaScript to the page's "Function and Global Variable Declaration" section:
-
-javascript
-document.querySelector('#my_report').addEventListener('click', function(e) {
-    if (e.target && e.target.classList.contains('btn-pass')) {
-        var row = e.target.closest('tr');
-        var transID = row.querySelector('input[name="f01"]');
-        var unitPrice = row.querySelector('input[name="f02"]');
-        var prodctName = row.querySelector('input[name="f03"]');
-        var tranID = transID ? transID.value : '';
-        var uPrice = unitPrice ? unitPrice.value : '';
-        var itemName = prodctName ? prodctName.value : '';
-        
-        // Redirect with multiple page items (P4_PID_TRANSACTION, P4_PID_PRODUCT, P4_UNIT_PRICE)
-        var url = 'f?p=' + $v('pFlowId') + ':4:' + $v('pInstance') + '::NO::P4_PID_TRANSACTION,P4_PID_PRODUCT,P4_UNIT_PRICE:' + 
-                  encodeURIComponent(tranID) + ',' + 
-                  encodeURIComponent(uPrice) + ',' + 
-                  encodeURIComponent(itemName);
-        window.location.href = url;
-    }
-});
-Key Com
-

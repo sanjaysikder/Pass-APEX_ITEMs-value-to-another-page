@@ -4,8 +4,7 @@ This guide demonstrates how to pass values from a classic report to another page
 - Oracle APEX 19.1 or higher
 - Classic report region with editable fields
 - Target page with items to receive the values
-## Implementation Steps
-
+## IMPLEMENTATION STEPS
 ### Step 1: Configure Classic Report Query
 Modify your classic report query to include APEX items and buttons:
 ```sql
@@ -31,12 +30,14 @@ TRD_PRODUCT_INFO b ON a.PID_PRODUCT = b.PID
 WHERE
 a.PID_TRANSACTION = NVL(:P5_TRANSACTION_ID, a.PID_TRANSACTION)
 
-
-## **Step 2: JavaScript Code**
+```JavaScript
+# **Step 2: JavaScript Code**
 ## **Add this JavaScript to the page's Function and Global Variable Declaration section:**
 
 //apex_iten Edited Value set another normal page
-```sql
+
+
+```JavaScript
 document.querySelector('#my_report').addEventListener('click', function(e) {
 if (e.target && e.target.classList.contains('btn-pass')) {
 var row = e.target.closest('tr');
@@ -52,7 +53,9 @@ window.location.href = url;
 }
 });
 
-### **Key Components:**
+
+```keycomponents
+### Key Components:
 
 Event listener attached to the report container (#my_report)
 Identifies clicked button by class (btn-pass)
@@ -60,8 +63,5 @@ Extracts values from APEX items (f01, f02, f03)
 Constructs URL with encoded values for target page items
 Redirects to page 4 with the values
 
-
-
-## **Thank You**
-##**Sanjay Sikder**
-
+## Thank You
+##Sanjay Sikder
